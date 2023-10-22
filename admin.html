@@ -1,0 +1,114 @@
+<style>
+    .admin-holder {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 100px;
+    }
+
+    form {
+        max-width: 400px;
+        margin: 0;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f4f4f4;
+    }
+
+    input[type="text"],
+    select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+
+    input[type="radio"] {
+        margin-right: 5px;
+    }
+
+    button {
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+    br {
+        clear: both;
+    }
+</style>
+<div class="admin-holder">
+    <form action="https://api.sheety.co/c3bd33e8f18f29817ac3ec3bcd42ed1f/toysAmazon2/sheetName"
+        method="POST">
+        <input type="text" name="title" placeholder="Назва товару"><br><br>
+        <input type="text" name="img" placeholder="Назва картинки" value="img-1.png"><br><br>
+        <input type="text" name="price" placeholder="Ціна"><br><br>
+        <input type="text" name="oldprice" placeholder="Стара ціна"><br><br>
+
+        <select name="category">
+            <option value="1">iPhone</option>
+            <option value="2">MacBook</option>
+            <option value="3">Apple Watch</option>
+            <option value="4">iPad</option>
+        </select><br><br>
+
+        <p>Чи виводити в блоці "Гарячі пропозиції"</p>
+        <label><input type="radio" name="hotoffer" value="yes"> Так</label>
+        <label><input type="radio" name="hotoffer" value="no" checked> Ні</label>
+        <br><br>
+
+        <button>Добавити товар</button>
+    </form>
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <form action="https://651458ac8e505cebc2eb2863.mockapi.io/category" method="POST">
+        <input type="text" name="[0]title" value="iPhone" placeholder="Назва категорії"><br><br>
+        <input type="text" name="[1]title" value="MacBook" placeholder="Назва категорії"><br><br>
+        <input type="text" name="[2]title" value="Apple watch"
+            placeholder="Назва категорії"><br><br>
+        <input type="text" name="[3]title" value="iPad" placeholder="Назва категорії"><br><br>
+        <button>Добавити категорію</button>
+    </form>
+</div>
+
+
+
+<script>
+    const catalog = [{
+        "id": 2, "image": "https://m.media-amazon.com/images/I/81ikyJypjOL._AC_UL320_.jpg", "title": "Nerf Elite 2.0 Commander RD-6 Dart Blaster, 12 Darts, 6-Dart Rotating Drum, Blasters, Kids Outdoor Toys for 8 Year Old Boys & Girls and Up",
+        "price": 30999, "oldprice": 34099, "catid": 1, "hotoffer": "no"
+    }, { "id": 2, "img": "2.png", "title": "Apple iPhone 14 128GB Starlight", "price": 30799, "oldprice": 33879, "catid": 1, "hotoffer": "no" }, { "id": 3, "img": "3.png", "title": "Apple iPhone 13 128GB Starlight", "price": 27799, "oldprice": 30579, "catid": 1, "hotoffer": "no" }, { "id": 4, "img": "4.png", "title": "Apple iPhone 13 128GB Pink", "price": 27799, "oldprice": 30579, "catid": 1, "hotoffer": "no" }, { "id": 5, "img": "5.png", "title": "Apple iPhone 13 128GB Blue", "price": 27799, "oldprice": 30579, "catid": 1, "hotoffer": "no" }, { "id": 6, "img": "6.png", "title": "Apple MacBook Air 13\" M1 8\/256 7GPU Space Gray Late 2020", "price": 37999, "oldprice": 41799, "catid": 2, "hotoffer": "yes" }, { "id": 7, "img": "7.png", "title": "Apple MacBook Air 13“ Midnight M2 8\/256 8GPU 2022", "price": 46999, "oldprice": 51699, "catid": 2, "hotoffer": "no" }, { "id": 8, "img": "8.png", "title": "Apple MacBook Pro 14\" Space Gray M1 Pro 16\/512 8CPU 14GPU", "price": 67599, "oldprice": 74359, "catid": 2, "hotoffer": "no" }, { "id": 9, "img": "9.png", "title": "Apple MacBook Pro 16\" Space Gray M1 Pro 16\/512 16GPU", "price": 74499, "oldprice": 81949, "catid": 2, "hotoffer": "no" }, { "id": 10, "img": "10.png", "title": "Apple MacBook Pro 14\" Space Gray M2 Pro 16\/512 10CPU 16GPU", "price": 80899, "oldprice": 88989, "catid": 2, "hotoffer": "no" }, { "id": 11, "img": "11.png", "title": "Apple Watch Series 9 45mm GPS+LTE Silver Aluminum Case with Storm Blue Sport Band", "price": 20972, "oldprice": 23073, "catid": 3, "hotoffer": "yes" }, { "id": 12, "img": "12.png", "title": "Apple Watch Series 7 41mm GPS Green Aluminum Case With Clover Sport Band", "price": 14860, "oldprice": 16350, "catid": 3, "hotoffer": "no" }, { "id": 13, "img": "13.png", "title": "Apple Watch SE GPS 40mm Space Grey Aluminium Case with Midnight Sport Band", "price": 9894, "oldprice": 10887, "catid": 3, "hotoffer": "no" }, { "id": 14, "img": "14.png", "title": "Apple Watch Series 7 41mm GPS Starlight Aluminum Case With Starlight Sport Band", "price": 16006, "oldprice": 17610, "catid": 3, "hotoffer": "no" }, { "id": 15, "img": "15.png", "title": "Apple Watch Ultra 49mm Titanium Case with Midnight Ocean Band", "price": 34199, "oldprice": 37619, "catid": 3, "hotoffer": "no" }, { "id": 16, "img": "16.png", "title": "Apple iPad 9 10.2\" 64GB Wi-Fi Space Gray", "price": 13799, "oldprice": 15179, "catid": 4, "hotoffer": "yes" }, { "id": 17, "img": "17.png", "title": "Apple iPad Air Wi-Fi 64GB Blue", "price": 29499, "oldprice": 32449, "catid": 4, "hotoffer": "no" }, { "id": 18, "img": "18.png", "title": "Apple iPad mini 8.3\" 64GB Wi-Fi Space Gray", "price": 20499, "oldprice": 22549, "catid": 4, "hotoffer": "no" }, { "id": 19, "img": "19.png", "title": "Apple iPad mini 8.3\" 256GB Wi-Fi Pink", "price": 27999, "oldprice": 30799, "catid": 4, "hotoffer": "no" }, { "id": 20, "img": "20.png", "title": "Apple iPad Air Wi-Fi 64GB Sky Blue", "price": 22882, "oldprice": 25174, "catid": 4, "hotoffer": "no" }];
+
+    catalog.forEach((item, index) => {
+        setTimeout(function () {
+            fetch('https://api.sheety.co/c3bd33e8f18f29817ac3ec3bcd42ed1f/toysAmazon2/sheetName', {
+                method: 'POST',
+                headers: { 'content-type': 'application/json' },
+                body: JSON.stringify(item)
+            }).then(res => {
+                console.log(item);
+            })
+
+        }, index * 500);
+    });
+</script>
