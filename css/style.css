@@ -648,9 +648,6 @@ svg {
 
 
 
-
-
-
 /**
  * Список добавлених товарів
  */
@@ -1061,6 +1058,7 @@ svg {
 
 .description__par {
     display: flex;
+    flex-direction: row-reverse;
 }
 
 .logo__img {
