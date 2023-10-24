@@ -21,7 +21,8 @@ function viewProducts() {
             // Наповнюємо змінну масивом в вигляді html
             const productsHtml = products.map((product) => {
                return `<div class="card-product">
-                        <a href="${product.productLink}" target="_blank" class="card-product__img-hold">
+                        <a href="${product.productLink}" target="_blank" class="card-product__img-hold" aria-label="link to the product image
+                        ">
                            <img src="${product.image}" alt="" class="card-product__img">
                         </a>
                         <div class="card-product__text-hold">
