@@ -1056,19 +1056,20 @@ svg {
     background-color: var(--hover-pr);
 }
 
-.description__par {
+/* .description__par {
     display: flex;
     flex-direction: row-reverse;
-}
+} */
 
 .logo__img {
     max-width: 27%;
 }
 
+/* 
 @media screen and (max-width: 600px) {
     .description__par {
         display: flex;
         flex-wrap: wrap;
         flex-direction: column-reverse;
     }
-}
+} */
