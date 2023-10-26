@@ -26,7 +26,7 @@ function viewProducts() {
                         </a>
                         <div class="card-product__text-hold">
                            <a href="${product.Link}" target="_blank" class="card-product__title-link">${product.Title}</a>
-                           <span class="card-product__price">${product.Price}</span>
+                           <span class="card-product__price card-color__price">${product.Price}</span>
                         </div>
                      </div>`;
             });
