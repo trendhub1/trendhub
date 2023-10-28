@@ -1077,3 +1077,19 @@ svg {
         flex-direction: column-reverse;
     }
 }
+
+@media screen and (max-width: 595px) {
+    /* .navigation {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    } */
+
+    .logo__img {
+        display: none;
+    }
+
+    .navigation__middle {
+        margin-left: 60px;
+    }
+}
