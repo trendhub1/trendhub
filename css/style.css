@@ -928,7 +928,7 @@ svg {
     margin: 42px 0 28px;
 }
 
-.footer .footer__copyright {
+.footert .footer__copyright {
     color: #999;
     font-size: 12px;
     padding-top: 20px;
@@ -1079,11 +1079,6 @@ svg {
 }
 
 @media screen and (max-width: 595px) {
-    /* .navigation {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column-reverse;
-    } */
 
     .logo__img {
         display: none;
