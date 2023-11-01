@@ -34,6 +34,15 @@
 		crossorigin="anonymous">
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/style.css">
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-QFVYNDQQ78"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'G-QFVYNDQQ78');
+	</script>
 </head>
 
 <body>
@@ -174,6 +183,27 @@
 
 	<div class="catalog" id="catalog">
 		<div class="container">
+			<div class="catalog__header">
+				<div class="catalog__select-category dropdown">
+					<h3 class="dropdown-btn">Вибрати категорію</h3>
+					<div class="dropdown-content" id="category-list">
+
+					</div>
+				</div>
+				<h3 class="catalog__products-summ">Знайдено товарів: <span
+						id="view-count-products">24</span></h3>
+			</div>
+
+			<div class="catalog__content" id="catalog-products">
+
+
+			</div>
+
+		</div>
+	</div>
+
+	<div class="catalog" id="catalog">
+		<div class="container">
 			<h2 class="hot-offers__title title-square">
 				<span class="title-square__icon"><svg class='icon icon-fire'>
 						<use xlink:href='#icon-fire'></use>
@@ -296,15 +326,7 @@
 
 
 
-	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-QFVYNDQQ78"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
-
-		gtag('config', 'G-QFVYNDQQ78');
-	</script>
+	
 	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
 	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
