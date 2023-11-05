@@ -52,7 +52,7 @@ fetch(FULL_URL)
    .then(res => res.text())
    .then(rep => {
       let data = JSON.parse(rep.substr(47).slice(0, -2));
-      console.log(data.table.rows[0].c[0].v);
+      // console.log(data.table.rows[0].c[0].v);
    })
 
 
@@ -64,45 +64,3 @@ fetch(FULL_URL)
 
 
 
-// Слідкуємо за категоріями
-if (boxCategory) {
-   boxCategory.onclick = (e) => {
-
-      // Забороняємо стандартний функціонал html
-      e.preventDefault();
-
-      // Витягуємо елемент по якому був клік
-      const el = e.target;
-
-      // Відбираємо дата атрибути цього елементу
-      const elData = el.dataset;
-
-      // Відираємо css клас, щоб по ньому відбирати потрібний нам елемент
-      const elClass = el.classList;
-
-      // Якщо це елемент категорії починаємо робити наш функціонал
-      if (elClass.contains('js-cat')) {
-
-         // Формуємо id категорії
-         const catid = elData.catid;
-
-         // Змінна для товарів
-         let catalog;
-
-         // Дивимося чи потрібно очищувати і просто виводити товари
-         if (catid == 0 || catid == undefined) {
-
-            // Витягуємо дані з api
-            catalog = getProducts();
-
-         } else {
-
-            // Виводимо товари відносно категорії
-            catalog = getProductsByCat(catid);
-         }
-
-         // Виводимо товари
-         viewProducts(catalog);
-      }
-   }
-}
